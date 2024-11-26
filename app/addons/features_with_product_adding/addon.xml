@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>features_with_product_adding</id>
+    <version>1.0.0</version>
+    <priority>100500</priority>
+    <default_language>ru</default_language>
+    <supplier>Exikane</supplier>
+    <queries>
+        <item for="install">ALTER TABLE ?:product_features ADD COLUMN is_required char(1) NOT NULL DEFAULT 'N'</item>
+        <item for="uninstall">ALTER TABLE ?:product_features DROP COLUMN is_required</item>
+    </queries>
+</addon>
